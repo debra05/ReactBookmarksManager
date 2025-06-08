@@ -1,0 +1,6 @@
+@ReactBookmarksManager.Web_HostAddress = http://localhost:5150
+
+GET {{ReactBookmarksManager.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
