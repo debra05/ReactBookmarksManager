@@ -38,6 +38,11 @@ namespace ReactBookmarksManager.Data
             using var context = new BookmarksManagerDataContext(_connectionString);
             context.Database.ExecuteSqlInterpolated($"UPDATE Bookmarks SET Title = {title} WHERE Id = {id}");
         }
+        public List<Bookmark> GetBookMarksForUser(int id)
+        {
+            using var context = new BookmarksManagerDataContext(_connectionString);
+            return context.Bookmarks.Where(b => b.UserId == id).ToList();
+        }
 
         public List<TopBookmarks> GetTopBookmarks()
         {
