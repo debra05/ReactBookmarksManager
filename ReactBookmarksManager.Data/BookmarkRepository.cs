@@ -61,7 +61,7 @@ namespace ReactBookmarksManager.Data
                 topBookmark.Count++;
             }
 
-            return list.OrderByDescending(bm => bm.Count).Take(5).ToList();
+            return list.OrderByDescending(bm => bm.Count).Take(6).ToList();
         }
 
 
